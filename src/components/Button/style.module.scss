@@ -1,0 +1,96 @@
+@import './colors.scss';
+
+button {
+  min-width: 6em;
+  padding: 1em 1.2em;
+  font-size: 1em;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    pointer-events: none;
+  }
+
+  color: map-get($normal_color, text);
+  background-color: $basic-background-color;
+}
+
+.with-highlight:not(.outlined) {
+  &::before {
+    background: $normal_highlight;
+  }
+
+  &.normal {
+    &::before {
+      background: $normal_highlight;
+    }
+  }
+
+  &.primary {
+    &::before {
+      background: $primary_highlight;
+    }
+  }
+
+  &.warning {
+    &::before {
+      background: $warning_highlight;
+    }
+  }
+
+  &.danger {
+    &::before {
+      background: $danger_highlight;
+    }
+  }
+
+  &.success {
+    &::before {
+      background: $success_highlight;
+    }
+  }
+}
+
+.outlined.with-highlight {
+  &::before {
+    background: $normal_highlight;
+  }
+}
+
+.outlined {
+  border: 1px solid map-get($normal_color, line_color);
+  color: map-get($normal_color, text);
+  background-color: $basic-background-color;
+
+  &.normal {
+    border: 1px solid map-get($normal_color, line_color);
+    color: map-get($normal_color, text);
+  }
+
+  &.primary {
+    border: 1px solid map-get($primary_color, line_color);
+    color: map-get($primary_color, text);
+  }
+
+  &.warning {
+    border: 1px solid map-get($warning_color, line_color);
+    color: map-get($warning_color, text);
+  }
+
+  &.danger {
+    border: 1px solid map-get($danger_color, line_color);
+    color: map-get($danger_color, text);
+  }
+
+  &.success {
+    border: 1px solid map-get($success_color, line_color);
+    color: map-get($success_color, text);
+  }
+}

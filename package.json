@@ -1,21 +1,39 @@
 {
   "name": "koibumi-ui",
+  "private": false,
   "version": "0.0.0",
-  "description": "A moe UI Library",
-  "scripts": {
-    "start": "vite",
-    "dev": "vite",
-    "build": "vite build",
-    "serve": "vite preview"
-  },
+  "type": "module",
   "license": "MIT",
-  "devDependencies": {
-    "typescript": "^4.9.5",
-    "vite": "^4.1.1",
-    "vite-plugin-solid": "^2.5.0"
+  "author": "haruki-nikaidou",
+  "description": "A solid.js UI library specializing in moe's design.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/haruki-nikaidou/koibumi-ui"
+  },
+  "keywords": [
+    "solidjs",
+    "component",
+    "moe",
+    "design"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "sass": "^1.63.4",
-    "solid-js": "^1.6.10"
+    "solid-js": "^1.7.8"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.3.0",
+    "@typescript-eslint/parser": "^6.3.0",
+    "eslint": "^8.46.0",
+    "eslint-config-prettier": "^9.0.0",
+    "prettier": "^3.0.1",
+    "scss": "^0.2.4",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5",
+    "vite-plugin-sass-glob-import": "^2.0.0",
+    "vite-plugin-solid": "^2.7.0"
   }
 }

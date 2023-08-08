@@ -1,27 +1,31 @@
-import type { Component } from 'solid-js';
+import { createSignal } from 'solid-js';
+import koibumiLogo from './assets/koibumi.svg';
+import './App.css';
 
-import logo from './logo.svg';
-import styles from './App.module.css';
+function App() {
+  const [count, setCount] = createSignal(0);
 
-const App: Component = () => {
   return (
-    <div class={styles.App}>
-      <header class={styles.header}>
-        <img src={logo} class={styles.logo} alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          class={styles.link}
-          href="https://github.com/solidjs/solid"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Solid
+    <>
+      <div>
+        <a href="https://github.com/haruki-nikaidou/koibumi-ui" target="_blank">
+          <img src={koibumiLogo} class="logo" alt="Koibumi logo" />
         </a>
-      </header>
-    </div>
+      </div>
+      <h1>Koibumi UI</h1>
+      <div class="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count()}
+        </button>
+        <p>
+          Edit <code>src/App.tsx</code> and save to test HMR
+        </p>
+      </div>
+      <p class="read-the-docs">
+        Click on the Koibumi logo to learn more
+      </p>
+    </>
   );
-};
+}
 
 export default App;
