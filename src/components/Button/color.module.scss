@@ -1,0 +1,73 @@
+@import 'src/colors/color.scss';
+
+$primary_color: (
+  text: $color-primary-dark-3,
+  background_base: $color-primary,
+  background_highlight_center: $color-primary-light-3,
+  background_highlight_verge: $color-primary-light-1,
+  line_color: $color-primary-dark-2,
+);
+$primary_highlight: radial-gradient(
+  circle at var(--x) var(--y),
+  rgba(map-get($primary_color, background_highlight_center), 0.7) 0%,
+  rgba(map-get($primary_color, background_highlight_verge), 0.3) 40%,
+  rgba(map-get($primary_color, background_highlight_verge), 0) 100%
+);
+
+$danger_color: (
+  text: $color-danger-dark-3,
+  background_base: $color-danger,
+  background_highlight_center: $color-danger-light-3,
+  background_highlight_verge: $color-danger-light-1,
+  line_color: $color-danger-dark-2,
+);
+$danger_highlight: radial-gradient(
+  circle at var(--x) var(--y),
+  rgba(map-get($danger_color, background_highlight_center), 0.7) 0%,
+  rgba(map-get($danger_color, background_highlight_verge), 0.3) 40%,
+  rgba(map-get($danger_color, background_highlight_verge), 0) 100%
+);
+
+$warning_color: (
+  text: $color-warning-dark-3,
+  background_base: $color-warning,
+  background_highlight_center: $color-warning-light-3,
+  background_highlight_verge: $color-warning-light-1,
+  line_color: $color-warning-dark-2,
+);
+$warning_highlight: radial-gradient(
+  circle at var(--x) var(--y),
+  rgba(map-get($warning_color, background_highlight_center), 0.7) 0%,
+  rgba(map-get($warning_color, background_highlight_verge), 0.3) 40%,
+  rgba(map-get($warning_color, background_highlight_verge), 0) 100%
+);
+
+$success_color: (
+  text: $color-success-dark-3,
+  background_base: $color-success,
+  background_highlight_center: $color-success-light-3,
+  background_highlight_verge: $color-success-light-1,
+  line_color: $color-success-dark-2,
+);
+$success_highlight: radial-gradient(
+  circle at var(--x) var(--y),
+  rgba(map-get($success_color, background_highlight_center), 0.7) 0%,
+  rgba(map-get($success_color, background_highlight_verge), 0.3) 40%,
+  rgba(map-get($success_color, background_highlight_verge), 0) 100%
+);
+
+$normal_color: (
+  text: $color-scale-gray-7,
+  background_base: $color-scale-gray-1,
+  background_highlight_center: $color-scale-gray-4,
+  background_highlight_verge: $color-scale-gray-3,
+  line_color: $color-scale-gray-6,
+);
+$normal_highlight: radial-gradient(
+  circle at var(--x) var(--y),
+  rgba(map-get($normal_color, background_highlight_center), 0.7) 0%,
+  rgba(map-get($normal_color, background_highlight_verge), 0.3) 40%,
+  rgba(map-get($normal_color, background_highlight_verge), 0) 100%
+);
+
+$basic-background-color: map-get($normal_color, background_base);
